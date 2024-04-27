@@ -1,0 +1,21 @@
+server:
+  port: 2004
+  servlet:
+    context-path: /storage
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+  application:
+    name: storage-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.5.0.111:8848
+        username: nacos
+        password: nacos
+        group: SPRING_CLOUD
+logging:
+  level:
+    org.springframework.web: trace
+    org.springframework.security: trace
+    org.springframework.security.oauth2: debug

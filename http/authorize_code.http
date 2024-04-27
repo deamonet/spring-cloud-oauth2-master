@@ -1,0 +1,4 @@
+GET http://localhost:2000/uaa/oauth/authorize?client_id=sentinel&response_type=code
+
+###
+POST http://localhost:2000/uaa/oauth/token
